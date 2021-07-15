@@ -10,19 +10,6 @@ This repository contains codes from a Youtube playlist for beginners to create t
 4. Install required dependencies using `yarn install` in this repository.
 5. (Optional) Install Ethereum syntax highlighter [(this for sublime)](https://packagecontrol.io/packages/Ethereum).
 
-## Development
-
-### [Stage 1: Writing Your First Smart Contract](https://www.youtube.com/watch?v=044h0ZI-fDI)
-
-> Ensure that bash points to the bin (`~/.config/yarn/global/node_modules/.bin/truffle`)
-
-1. Startup Ganache.
-2. Setup a barebones truffle project with `truffle init` command.
-3. Setup the `migrations/2_deploy_contracts.js` and `ICOToken.sol` file for deployment.
-4. Run `truffle migrate --reset` to run all migrations located within your project's migrations directory - which are simply a set of managed deployment scripts.
-5. Write a simple test to see that it is deployed.
-6. Run `truffle test`
-
 ## Basic Concepts
 
 ### [Token vs Cryptocurrency vs Altcoins](https://www.investopedia.com/terms/c/crypto-token.asp)
