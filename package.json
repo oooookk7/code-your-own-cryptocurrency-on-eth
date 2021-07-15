@@ -1,0 +1,16 @@
+{
+  "name": "ico-token",
+  "version": "0.0.1",
+  "description": "$ICO token",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "2.6.1"
+  }
+}
