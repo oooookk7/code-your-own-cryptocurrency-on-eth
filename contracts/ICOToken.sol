@@ -9,7 +9,10 @@ contract ICOToken {
   string  public standard = "v1.0";
   uint256 public totalSupply;
 
-  constructor() public {
-    totalSupply = 10000000;
+  mapping(address => uint256) public balanceOf;
+
+  constructor(uint256 _initialSupply) public {
+    balanceOf[msg.sender] = _initialSupply;
+    totalSupply = _initialSupply;
   }
 }
