@@ -1,6 +1,6 @@
 # [Code Your Own Cryptocurrency on Ethereum](https://www.youtube.com/playlist?list=PLS5SEs8ZftgWFuKg2wbm_0GLV0Tiy1R-n)
 
-This repository contains codes from a Youtube playlist for beginners to create their own ERC-20 token ([documentation here](https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-Transfer-address-address-uint256-)).
+This repository contains codes from a Youtube playlist for beginners to create their own ERC-20 token ([documentation here for Ethereum smart contract structure](https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-Transfer-address-address-uint256-), and [here for solidity language on getting started](https://docs.soliditylang.org/en/v0.4.24/introduction-to-smart-contracts.html)).
 
 ## Getting Started
 
