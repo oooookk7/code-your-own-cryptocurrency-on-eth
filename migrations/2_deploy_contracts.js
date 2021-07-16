@@ -1,5 +1,12 @@
 const ICOToken = artifacts.require('./ICOToken.sol');
+const ICOTokenSale = artifacts.require('./ICOTokenSale.sol');
+const fs = require('fs');
 
-module.exports = function (deployer) {
-  deployer.deploy(ICOToken, 50000000);
+const supplyConfig = JSON.parse(fs.readFileSync('../supply-config.json', 'utf8'));
+
+module.exports = function(deployer) {
+  deployer.deploy(ICOToken, supplyConfig['token_supply']).then(function() {
+    // Token price is 0.001 Ether
+    return deployer.deploy(ICOTokenSale, ICOToken.address, supplyConfig['token_price']);
+  });
 };
