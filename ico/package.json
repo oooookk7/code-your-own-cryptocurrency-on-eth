@@ -1,7 +1,5 @@
 {
   "name": "ico-token",
-  "version": "0.1.0",
-  "description": "$ICO token",
   "scripts": {
     "test": "truffle test",
     "migrate": "truffle migrate --reset",
