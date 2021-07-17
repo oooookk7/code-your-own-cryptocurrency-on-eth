@@ -1,18 +1,16 @@
 {
   "name": "ico-token",
-  "version": "0.1.0",
-  "description": "$ICO token",
   "scripts": {
-    "ico:test": "cd ico && truffle test",
-    "ico:migrate": "cd ico && truffle migrate --reset",
-    "ico:server": "cd ico && cp supply-config.json src/config.json && lite-server",
-    "ico:console": "cd ico && truffle console"
+    "test": "truffle test",
+    "migrate": "truffle migrate --reset",
+    "server": "cp supply-config.json src/config.json && lite-server",
+    "console": "truffle console"
   },
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "lite-server": "2.6.1",
     "chai": "^4.3.4",
+    "lite-server": "2.6.1",
     "mocha": "^9.0.2"
   }
 }
