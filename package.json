@@ -2,16 +2,11 @@
   "name": "ico-token",
   "version": "0.1.0",
   "description": "$ICO token",
-  "main": "truffle.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "truffle test",
-    "migrate": "truffle migrate --reset",
-    "server": "cp supply-config.json src/config.json && lite-server",
-    "server:ico": "cp src/ico/* src/ && yarn run server",
-    "console": "truffle console"
+    "ico:test": "cd ico && truffle test",
+    "ico:migrate": "cd ico && truffle migrate --reset",
+    "ico:server": "cd ico && cp supply-config.json src/config.json && lite-server",
+    "ico:console": "cd ico && truffle console"
   },
   "license": "MIT",
   "dependencies": {},
