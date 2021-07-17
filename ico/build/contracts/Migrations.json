@@ -53,7 +53,7 @@
   "sourceMap": "66:352:2:-;;;113:10;90:33;;;;;;;;;;;;;;;;;;;;66:352;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:2;;;;;;;",
   "deployedSourceMap": "66:352:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;127:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;90:33;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;313:103;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;313:103:2;;;;;;;;;;;;;;;;;:::i;:::-;;127:36;;;;:::o;90:33::-;;;;;;;;;;;;;:::o;313:103::-;225:5;;;;;;;;;;;211:19;;:10;:19;;;196:101;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;402:9;375:24;:36;;;;313:103;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Migrations {\n  address public owner = msg.sender;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    require(\n      msg.sender == owner,\n      \"This function is restricted to the contract's owner\"\n    );\n    _;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "/Users/leticiachoo/Desktop/erc-20-coin/contracts/Migrations.sol",
+  "sourcePath": "/Users/leticiachoo/Desktop/erc-20-coin/ico/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -915,8 +915,8 @@
     "1300": {
       "events": {},
       "links": {},
-      "address": "0xDBcF6F3C5B0F1831BE2fF5808236C63D9FD2a6Db",
-      "transactionHash": "0xa825daefd090ed4835fa50dadcf0803139279a0b40fafbfbe60595ff22d71cc0"
+      "address": "0x49d6fc864114c731cEF900a9128115f639F7Ec14",
+      "transactionHash": "0xf670aafec67b2c3cd0c79db0ef984c33ae76834ab2edb09b0fc9faaf41ffb259"
     },
     "5777": {
       "events": {},
@@ -956,7 +956,7 @@
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-17T07:09:14.856Z",
+  "updatedAt": "2021-07-17T15:07:42.068Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
