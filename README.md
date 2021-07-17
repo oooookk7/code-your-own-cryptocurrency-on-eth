@@ -4,7 +4,7 @@
 
 > Based on the Youtube tutorial ["Code Your Own Cryptocurrency on Ethereum"](https://www.youtube.com/playlist?list=PLS5SEs8ZftgWFuKg2wbm_0GLV0Tiy1R-n) by [Dapp University](https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ).
 
-<img src="ico/purchase-ico.gif" width="450" height="auto" />
+<img src="purchase-ico.gif" width="450" height="auto" />
 
 Create a ERC-20 token `$ICO` for investors to purchase the tokens using `$ETH` during [the ICO phase](https://www.investopedia.com/terms/i/initial-coin-offering-ico.asp).
 
