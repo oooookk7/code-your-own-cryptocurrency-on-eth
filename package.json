@@ -10,6 +10,7 @@
     "test": "truffle test",
     "migrate": "truffle migrate --reset",
     "server": "cp supply-config.json src/config.json && lite-server",
+    "server:ico": "cp src/ico/* src/ && yarn run server",
     "console": "truffle console"
   },
   "license": "MIT",
