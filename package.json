@@ -7,10 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "ico:test": "cd ico && truffle test",
-    "ico:migrate": "cd ico && truffle migrate --reset",
-    "ico:server": "cd ico && cp supply-config.json src/config.json && lite-server",
-    "ico:console": "cd ico && truffle console"
+    "test": "truffle test",
+    "migrate": "truffle migrate --reset",
+    "server": "cp supply-config.json src/config.json && lite-server",
+    "console": "truffle console"
   },
   "license": "MIT",
   "dependencies": {},
