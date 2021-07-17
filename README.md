@@ -1,14 +1,34 @@
-# [Code Your Own Cryptocurrency on Ethereum](https://www.youtube.com/playlist?list=PLS5SEs8ZftgWFuKg2wbm_0GLV0Tiy1R-n)
+# 🏛️ `$ICO` Token
+
+### Stage 1: ICO for `$ICO`
+
+> Based on the Youtube tutorial ["Code Your Own Cryptocurrency on Ethereum"](https://www.youtube.com/playlist?list=PLS5SEs8ZftgWFuKg2wbm_0GLV0Tiy1R-n) by [Dapp University](https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ).
 
 <img src="purchase-ico.gif" width="450" height="auto" />
 
-(GIF created using [gifcap.dev](https://gifcap.dev/))
+Create a ERC-20 token `$ICO` for investors to purchase the tokens using `$ETH` during [the ICO phase](https://www.investopedia.com/terms/i/initial-coin-offering-ico.asp).
 
-This repository contains codes from a Youtube playlist for beginners to create their own ERC-20 token ([documentation here for Ethereum smart contract structure](https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-Transfer-address-address-uint256-), and [here for solidity language on getting started](https://docs.soliditylang.org/en/v0.4.24/introduction-to-smart-contracts.html)).
+- [Smart contract structure](https://docs.openzeppelin.com/contracts/2.x/api/token/erc20).
+- [Guide using the Solidity language](https://docs.soliditylang.org/en/v0.4.24/introduction-to-smart-contracts.html).
 
-In this project, a token called `$ICO` is created for users to purchase the tokens during [the ICO phase](https://www.investopedia.com/terms/i/initial-coin-offering-ico.asp).
+### Stage 2: Exchange for `$ICO`
 
-#### [Go Ethereum](https://geth.ethereum.org/)
+> Based on the Youtube tutorial ["The Ultimate Cryptocurrency Programming Tutorial for Blockchain"](https://www.youtube.com/playlist?list=PLS5SEs8ZftgXHEtZ19lXmDQZm_1JKaBTK) by [Dapp University](https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ).
+
+Create a site that facilitates swapping `$ICO` with `$ETH` (or vice-versa).
+
+## Getting Started
+
+1. Install [NodeJS](https://nodejs.org), [Yarn](https://yarnpkg.com/), and [Ganache](https://www.trufflesuite.com/ganache).
+2. Install [truffle](https://www.trufflesuite.com/docs/truffle/getting-started/installation) using `yarn global add truffle`.
+3. Download the [Metamask wallet extension](https://metamask.io/download.html)  to connect to the test wallets.
+4. Install required dependencies using `yarn install` in this repository.
+5. (Optional) Install Ethereum syntax highlighter [(this for sublime)](https://packagecontrol.io/packages/Ethereum).
+
+Favicon credits: [@ipapun](https://www.deviantart.com/ipapun).
+Gifs created using [gifcap.dev](https://gifcap.dev/).
+
+### [Go Ethereum](https://geth.ethereum.org/)
 
 As answered by [@Ismael on ethereum.stackexchange.com](https://ethereum.stackexchange.com/a/26676), the differences between using Truffle and GoETH is,
 
@@ -24,16 +44,6 @@ Resources:
 - [Finding the Network ID and Chain ID (and what are they)](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID)
 - [Proof-of-Work (PoW) vs Proof-of-Stake (PoS) vs Proof-of-Authority (PoA)](https://www.bissresearch.com/proof-of-stake-vs-proof-of-work-vs-proof-of-authority/)
 - [Network ID vs Chain ID?](https://ethereum.stackexchange.com/a/37571)
-
-## Getting Started
-
-1. Install [NodeJS](https://nodejs.org), [Yarn](https://yarnpkg.com/), and [Ganache](https://www.trufflesuite.com/ganache).
-2. Install [truffle](https://www.trufflesuite.com/docs/truffle/getting-started/installation) using `yarn global add truffle`.
-3. Download the [Metamask wallet extension](https://metamask.io/download.html)  to connect to the test wallets.
-4. Install required dependencies using `yarn install` in this repository.
-5. (Optional) Install Ethereum syntax highlighter [(this for sublime)](https://packagecontrol.io/packages/Ethereum).
-
-Favicon credits: [@ipapun](https://www.deviantart.com/ipapun).
 
 ## Basic Concepts
 
@@ -130,195 +140,3 @@ It contains the user keys information (e.g. private and public keys) used for tr
 
 There are **Software wallets** that exists in the desktop, mobile or online (managed by 3rd parties), or **Hardware wallets**, a type of cold storage device, typically like a USB, that stores the user’s private key in a protected hardware device (e.g. Trezor).
 
-## Code Structure
-
-There are 6 defined functions: `balanceOf`, `totalSupply`, `transfer`, `transferFrom`, `approve`, and `allowance`.
-
-Below is an example code for an ERC-20 contract,
-
-```
-contract ERC20 {
-   function totalSupply() constant returns (uint theTotalSupply);
-   function balanceOf(address _owner) constant returns (uint balance);
-   function transfer(address _to, uint _value) returns (bool success);
-   function transferFrom(address _from, address _to, uint _value) returns (bool success);
-   function approve(address _spender, uint _value) returns (bool success);
-   function allowance(address _owner, address _spender) constant returns (uint remaining);
-   event Transfer(address indexed _from, address indexed _to, uint _value);
-   event Approval(address indexed _owner, address indexed _spender, uint _value);
-}
-```
-
-(Source: [@aunyks, 2015](https://gist.github.com/aunyks/56cb3a1bed21ae3160a6afba86a50ec8#file-erc20-definitions-sol))
-
-### `totalSupply()`
-
-This function allows an instance of the contract to calculate and return the total amount of the token that exists in circulation.
-
-```
-contract MyERCToken {
-  // In this case, the total supply
-  // of MyERCToken is fixed, but
-  // it can very much be changed
-  uint256 _totalSupply = 1000000;
-  
-  function totalSupply() constant returns (uint256 theTotalSupply) {
-    // Because our function signature
-    // states that the returning variable
-    // is "theTotalSupply", we'll just set that variable
-    // to the value of the instance variable "_totalSupply"
-    // and return it
-    theTotalSupply = _totalSupply;
-    return theTotalSupply;
-  }
-}
-```
-
-(Source: [@aunyks, 2015](https://gist.github.com/aunyks/fc9565dd99264b336564a299d259ddde#file-erc20-totalsupply-sol))
-
-### `balanceOf()`
-
-This function allows a smart contract to store and return the balance of the provided address. It accepts an address as a parameter, to which its balance is known publically.
-
-```
-contract MyERCToken {
-  // Create a table so that we can map addresses
-  // to the balances associated with them
-  mapping(address => uint256) balances;
-  // Owner of this contract
-  address public owner;
-  
-  function balanceOf(address _owner) constant returns (uint256 balance) {
-    // Return the balance for the specific address
-    return balances[_owner];
-  }
-}
-```
-
-(Source: [@aunyks, 2015](https://gist.github.com/aunyks/5564ed9a19778acfa14e978c36e3e2f8#file-erc20-balanceof-sol))
-
-### `approve()`
-
-This function allows the owner of the contract to authorize or approve the given address to withdraw instances of the token from the owner's address.
-
-This variable `msg` is an implicit field provided by external applications such as wallets to better interact with the contract. 
-
-The [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/) allows external applications to store and process data in it.
-
-The `msg.sender` is the address of the contract owner in the example below.
-
-
-```
-contract MyERCToken {
-  // Create a table so that we can map
-  // the addresses of contract owners to
-  // those who are allowed to utilize the owner's contract
-  mapping(address => mapping (address => uint256)) allowed;
-  
-  function approve(address _spender, uint256 _amount) returns (bool success) {
-    allowed[msg.sender][_spender] = _amount;
-    // Fire the event "Approval" to execute any logic
-    // that was listening to it
-    Approval(msg.sender, _spender, _amount);
-    return true;
-  }
-}
-```
-
-(Source: [@aunyks, 2015](https://gist.github.com/aunyks/643fc6334b56b12e4f86e30c76c5c698#file-erc20-approve-sol))
-
-### `transfer()`
-
-This function lets the owner of the contract to send a given amount of the token to another address just like a cryptocurrency transaction.
-
-
-```
-contract MyERCToken {
-  mapping(address => uint256) balances;
-  
-  // Note: This function returns a boolean value
-  //       indicating whether the transfer was successful
-  function transfer(address _to, uint256 _amount) returns (bool success) {
-    // If the sender has sufficient funds to send
-    // and the amount is not zero, then send to
-    // the given address
-    if (balances[msg.sender] >= _amount 
-      && _amount > 0
-      && balances[_to] + _amount > balances[_to]) {
-      balances[msg.sender] -= _amount;
-      balances[_to] += _amount;
-      // Fire a transfer event for any
-      // logic that's listening
-      Transfer(msg.sender, _to, _amount);
-        return true;
-      } else {
-        return false;
-      }
-   }
-}
-```
-
-(Source: [@aunyks, 2015](https://gist.github.com/aunyks/6bfaef246d3f1bbe30020249e0c28e2e#file-erc20-transfer-sol))
-
-
-### `transferFrom()`
-
-This function allows a smart contract to automate the transfer process and send a given amount of the token on behalf of the owner, instead of self like `transfer()`.
-
-```
-contract MyERCToken {
-  mapping(address => uint256) balances;
-  
-  function transferFrom(address _from, address _to, uint256 _amount) returns (bool success) {
-    if (balances[_from] >= _amount
-      && allowed[_from][msg.sender] >= _amount
-      && _amount > 0
-      && balances[_to] + _amount > balances[_to]) {
-    balances[_from] -= _amount;
-    balances[_to] += _amount;
-    Transfer(_from, _to, _amount);
-      return true;
-    } else {
-      return false;
-    }
-  }
-}
-```
-
-(Source: [@aunyks, 2015](https://gist.github.com/aunyks/09b2bfb2b919527e4601aefb5dd5fdd3#file-erc20-transferfrom-sol))
-
-### Token Name (Optional Field)
-
-For some wallets are able to identify the token.
-
-```
-contract MyERCToken {
-  string public constant name = "My Custom ERC20 Token";
-}
-```
-
-(Source: [Steven McKie, 2017](https://medium.com/blockchannel/the-anatomy-of-erc20-c9e5c5ff1d02))
-
-### Token Symbol (Optional Field)
-
-For some wallets to identify the token (e.g. BTC/ETH).
-
-```
-contract MyERCToken {
-  string public constant symbol = "MET";
-}
-```
-
-(Source: [Steven McKie, 2017](https://medium.com/blockchannel/the-anatomy-of-erc20-c9e5c5ff1d02))
-
-### Number of Decimals (Optional Field)
-
-Determine to what decimal place the amount of the token will be calculated. The most common number of decimals to consider is `18`.
-
-```
-contract MyERCToken {
-  uint8 public constant decimals = 18;
-}
-```
-
-(Source: [Steven McKie, 2017](https://medium.com/blockchannel/the-anatomy-of-erc20-c9e5c5ff1d02))
