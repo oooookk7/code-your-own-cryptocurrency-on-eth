@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "lite-server"
+    "test": "truffle test",
+    "build": "truffle migrate --reset",
+    "dev": "cp supply-config.json src/config.json && lite-server"
   },
   "license": "MIT",
   "dependencies": {},
