@@ -1,5 +1,7 @@
 # [Code Your Own Cryptocurrency on Ethereum](https://www.youtube.com/playlist?list=PLS5SEs8ZftgWFuKg2wbm_0GLV0Tiy1R-n)
 
+<img src="purchase-ico.gif" width="450" height="auto" />
+
 This repository contains codes from a Youtube playlist for beginners to create their own ERC-20 token ([documentation here for Ethereum smart contract structure](https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-Transfer-address-address-uint256-), and [here for solidity language on getting started](https://docs.soliditylang.org/en/v0.4.24/introduction-to-smart-contracts.html)).
 
 In this project, a token called `$ICO` is created for users to purchase the tokens during [the ICO phase](https://www.investopedia.com/terms/i/initial-coin-offering-ico.asp).
