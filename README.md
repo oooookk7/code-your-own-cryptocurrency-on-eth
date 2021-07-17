@@ -2,8 +2,6 @@
 
 <img src="purchase-ico.gif" width="450" height="auto" />
 
-Based on the ["Code Your Own Cryptocurrency on Ethereum" YouTube tutorial](https://www.youtube.com/playlist?list=PLS5SEs8ZftgWFuKg2wbm_0GLV0Tiy1R-n) by [Dapp University](https://www.youtube.com/c/DappUniversity).
-
 ## Getting Started
 
 1. Install [NodeJS](https://nodejs.org), [Yarn](https://yarnpkg.com/), and [Ganache](https://www.trufflesuite.com/ganache).
