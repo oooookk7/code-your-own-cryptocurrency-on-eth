@@ -6,9 +6,11 @@ This repository contains codes from a Youtube playlist for beginners to create t
 
 1. Install [NodeJS](https://nodejs.org), [Yarn](https://yarnpkg.com/), and [Ganache](https://www.trufflesuite.com/ganache).
 2. Install [truffle](https://www.trufflesuite.com/docs/truffle/getting-started/installation) using `yarn global add truffle`.
-3. Download the [Metamask wallet extension](https://metamask.io/download.html) and create a dummy wallet.
+3. Download the [Metamask wallet extension](https://metamask.io/download.html)  to connect to the test wallets.
 4. Install required dependencies using `yarn install` in this repository.
 5. (Optional) Install Ethereum syntax highlighter [(this for sublime)](https://packagecontrol.io/packages/Ethereum).
+
+Favicon credits: [@ipapun](https://www.deviantart.com/ipapun).
 
 ## Basic Concepts
 
