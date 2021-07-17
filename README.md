@@ -11,12 +11,6 @@ Create a ERC-20 token `$ICO` for investors to purchase the tokens using `$ETH` d
 - [Smart contract structure](https://docs.openzeppelin.com/contracts/2.x/api/token/erc20).
 - [Guide using the Solidity language](https://docs.soliditylang.org/en/v0.4.24/introduction-to-smart-contracts.html).
 
-### Stage 2: Exchange for `$ICO`
-
-> Based on the Youtube tutorial ["The Ultimate Cryptocurrency Programming Tutorial for Blockchain"](https://www.youtube.com/playlist?list=PLS5SEs8ZftgXHEtZ19lXmDQZm_1JKaBTK) by [Dapp University](https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ).
-
-Create a site that facilitates swapping `$ICO` with `$ETH` (or vice-versa).
-
 ## Basic Concepts
 
 ### [Token vs Cryptocurrency vs Altcoins](https://www.investopedia.com/terms/c/crypto-token.asp)
