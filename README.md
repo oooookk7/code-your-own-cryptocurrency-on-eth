@@ -1,4 +1,4 @@
-# 🏛️ `$ICO` Token
+# 📈 `$ICO` Token
 
 <img src="purchase-ico.gif" width="450" height="auto" />
 
